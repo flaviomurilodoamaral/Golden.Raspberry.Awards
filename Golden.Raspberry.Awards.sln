@@ -1,0 +1,83 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35222.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Golden.Raspberry.Awards.Web.Api", "Golden.Raspberry.Awards.Web.Api\Golden.Raspberry.Awards.Web.Api.csproj", "{D4D52761-62C5-42C9-A09E-77352B4882A3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Interface", "1 - Interface", "{2B56909B-AF51-4B0C-9BD0-1416EE6498E9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Application", "2 - Application", "{838D124F-CB57-44D9-BA97-5220172515D6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Infrastructure", "3 - Infrastructure", "{43F6F6B6-DDE1-4107-A9BB-D0BF95D1A6B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Golden.Raspberry.Awards.Service", "Golden.Raspberry.Awards.Service\Golden.Raspberry.Awards.Service.csproj", "{FDB4F47E-3A28-4DA1-8873-9AE362C3C145}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Golden.Raspberry.Awards.Repository", "Golden.Raspberry.Awards.Repository\Golden.Raspberry.Awards.Repository.csproj", "{9C1E43F0-B09C-4F5A-B00F-89FC9F11F7BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Golden.Raspberry.Awards.Entity", "Golden.Raspberry.Awards.Entity\Golden.Raspberry.Awards.Entity.csproj", "{7A03D79C-C1CD-4D70-BE21-5521D18BCA8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Golden.Raspberry.Awards.Business", "Golden.Raspberry.Awards.Business\Golden.Raspberry.Awards.Business.csproj", "{FD706B7D-5406-4448-A1C3-4B3C6B2A470B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Test", "4 - Test", "{EA24C402-A63E-4418-84FD-A555B4951F1C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Golden.Raspberry.Awards.IntegrationTest", "Golden.Raspberry.Awards.IntegrationTest\Golden.Raspberry.Awards.IntegrationTest.csproj", "{3A92260C-E0C7-40C5-B465-8BA4B3ACAEDD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.2 - Domain", "2.2 - Domain", "{EFE93C0F-4C46-460A-B9EB-BCF41F7AEC56}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.1 - Logic", "2.1 - Logic", "{CC25FE19-ABB5-4081-B014-2C8F8D8EDCF1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.2 - Data Access", "3.2 - Data Access", "{46E34390-51E5-4AD6-B857-8B085B877560}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.1 - Integration", "3.1 - Integration", "{87FB4582-91B0-49D2-977D-05D4E356C57E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D4D52761-62C5-42C9-A09E-77352B4882A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4D52761-62C5-42C9-A09E-77352B4882A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4D52761-62C5-42C9-A09E-77352B4882A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4D52761-62C5-42C9-A09E-77352B4882A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDB4F47E-3A28-4DA1-8873-9AE362C3C145}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDB4F47E-3A28-4DA1-8873-9AE362C3C145}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDB4F47E-3A28-4DA1-8873-9AE362C3C145}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDB4F47E-3A28-4DA1-8873-9AE362C3C145}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C1E43F0-B09C-4F5A-B00F-89FC9F11F7BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C1E43F0-B09C-4F5A-B00F-89FC9F11F7BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C1E43F0-B09C-4F5A-B00F-89FC9F11F7BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C1E43F0-B09C-4F5A-B00F-89FC9F11F7BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A03D79C-C1CD-4D70-BE21-5521D18BCA8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A03D79C-C1CD-4D70-BE21-5521D18BCA8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A03D79C-C1CD-4D70-BE21-5521D18BCA8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A03D79C-C1CD-4D70-BE21-5521D18BCA8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD706B7D-5406-4448-A1C3-4B3C6B2A470B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD706B7D-5406-4448-A1C3-4B3C6B2A470B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD706B7D-5406-4448-A1C3-4B3C6B2A470B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD706B7D-5406-4448-A1C3-4B3C6B2A470B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A92260C-E0C7-40C5-B465-8BA4B3ACAEDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A92260C-E0C7-40C5-B465-8BA4B3ACAEDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A92260C-E0C7-40C5-B465-8BA4B3ACAEDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A92260C-E0C7-40C5-B465-8BA4B3ACAEDD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D4D52761-62C5-42C9-A09E-77352B4882A3} = {2B56909B-AF51-4B0C-9BD0-1416EE6498E9}
+		{FDB4F47E-3A28-4DA1-8873-9AE362C3C145} = {87FB4582-91B0-49D2-977D-05D4E356C57E}
+		{9C1E43F0-B09C-4F5A-B00F-89FC9F11F7BB} = {46E34390-51E5-4AD6-B857-8B085B877560}
+		{7A03D79C-C1CD-4D70-BE21-5521D18BCA8C} = {EFE93C0F-4C46-460A-B9EB-BCF41F7AEC56}
+		{FD706B7D-5406-4448-A1C3-4B3C6B2A470B} = {CC25FE19-ABB5-4081-B014-2C8F8D8EDCF1}
+		{3A92260C-E0C7-40C5-B465-8BA4B3ACAEDD} = {EA24C402-A63E-4418-84FD-A555B4951F1C}
+		{EFE93C0F-4C46-460A-B9EB-BCF41F7AEC56} = {838D124F-CB57-44D9-BA97-5220172515D6}
+		{CC25FE19-ABB5-4081-B014-2C8F8D8EDCF1} = {838D124F-CB57-44D9-BA97-5220172515D6}
+		{46E34390-51E5-4AD6-B857-8B085B877560} = {43F6F6B6-DDE1-4107-A9BB-D0BF95D1A6B0}
+		{87FB4582-91B0-49D2-977D-05D4E356C57E} = {43F6F6B6-DDE1-4107-A9BB-D0BF95D1A6B0}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2CAD419D-32D4-478A-9E3B-CF0CAA87C41B}
+	EndGlobalSection
+EndGlobal
