@@ -1,6 +1,7 @@
 ﻿using Golden.Raspberry.Awards.Business.Interface;
 using Golden.Raspberry.Awards.Entity;
 using Golden.Raspberry.Awards.Service.Interface;
+using System.Text.RegularExpressions;
 
 namespace Golden.Raspberry.Awards.Business
 {
@@ -60,11 +61,13 @@ namespace Golden.Raspberry.Awards.Business
             // Obtém todos os prêmios ordenados por produtor e ano
             var awards = _service.GetMovies()
                 .Where(m => m.IsWinner)
-                .SelectMany(m => m.Producer.Split(',').Select(p => new
-                {
-                    Producer = p.Trim(),
-                    Year = m.Year
-                }))
+                .SelectMany(m =>
+                    Regex.Split(m.Producer, @"\s*(?:,|and)\s*")
+                    .Select(p => new
+                    {
+                        Producer = p.Trim(),
+                        Year = m.Year
+                    }))
                 .OrderBy(a => a.Producer)
                 .ThenBy(a => a.Year)
                 .ToList();
@@ -78,15 +81,21 @@ namespace Golden.Raspberry.Awards.Business
             foreach (var group in groupedByProducer)
             {
                 var producerAwards = group.OrderBy(a => a.Year).ToList();
+
                 for (int i = 1; i < producerAwards.Count; i++)
                 {
-                    producerIntervals.Add(new AwardInterval
+                    var interval = producerAwards[i].Year - producerAwards[i - 1].Year;
+
+                    if (interval >= 1)
                     {
-                        Producer = group.Key,
-                        Interval = producerAwards[i].Year - producerAwards[i - 1].Year,
-                        PreviousWin = producerAwards[i - 1].Year,
-                        FollowingWin = producerAwards[i].Year
-                    });
+                        producerIntervals.Add(new AwardInterval
+                        {
+                            Producer = group.Key,
+                            Interval = interval,
+                            PreviousWin = producerAwards[i - 1].Year,
+                            FollowingWin = producerAwards[i].Year
+                        });
+                    }
                 }
             }
 
