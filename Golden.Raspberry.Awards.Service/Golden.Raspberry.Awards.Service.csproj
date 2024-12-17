@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MSTest.TestFramework" Version="3.6.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Golden.Raspberry.Awards.Entity\Golden.Raspberry.Awards.Entity.csproj" />
     <ProjectReference Include="..\Golden.Raspberry.Awards.Repository\Golden.Raspberry.Awards.Repository.csproj" />
   </ItemGroup>

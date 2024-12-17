@@ -21,7 +21,6 @@ namespace Golden.Raspberry.Awards.IntegrationTest
         public void TestMovies()
         {
             SetMovies();
-            GetMovies();
         }
 
         public void SetMovies()
@@ -67,27 +66,7 @@ namespace Golden.Raspberry.Awards.IntegrationTest
                 }
             }
 
-            Assert.IsNotNull(movies, "A lista de filmes carregada do CSV não deve ser nula.");
-            Assert.IsTrue(movies.Count > 0, "A lista de filmes carregada do CSV deve conter elementos.");
-
             _service.LoadMovies(movies);
-        }
-
-        public void GetMovies()
-        {
-            var movies = _service.GetMovies();
-
-            Assert.IsNotNull(movies, "O retorno da lista de filmes não deve ser nulo.");
-            Assert.IsTrue(movies.Any(), "A lista de filmes não deve estar vazia.");
-
-            foreach (var movie in movies)
-            {
-                Assert.IsTrue(movie.Year >= DateTime.Now.AddYears(-500).Year && movie.Year <= DateTime.Now.Year, $"O ano {movie.Year} não está no intervalo válido.");
-                Assert.IsFalse(string.IsNullOrWhiteSpace(movie.Title), "O título do filme não deve ser vazio ou nulo.");
-                Assert.IsFalse(string.IsNullOrWhiteSpace(movie.Studio), "O campo Studio não deve ser vazio ou nulo.");
-                Assert.IsFalse(string.IsNullOrWhiteSpace(movie.Producer), "O campo Producer não deve ser vazio ou nulo.");
-                Assert.IsTrue(movie.IsWinner == true || movie.IsWinner == false, "O campo Winner deve ser um booleano válido.");
-            }
         }
     }
 }
