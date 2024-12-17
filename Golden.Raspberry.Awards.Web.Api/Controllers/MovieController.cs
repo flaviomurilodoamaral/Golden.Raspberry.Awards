@@ -14,6 +14,18 @@ namespace Golden.Raspberry.Awards.Web.Api.Controllers
             _business = business;
         }
 
+        [HttpGet("Get")]
+        public IActionResult Get()
+        {
+            var file = Path.Combine(Directory.GetCurrentDirectory().Replace("\\bin\\Debug\\net6.0", ""), "DataSource/movies.csv");
+
+            using var stream = new FileStream(file, FileMode.Open, FileAccess.Read);
+
+            _business.ProcessCsv(stream);
+
+            return GetAwardIntervals();
+        }
+
         [HttpPost("upload")]
         [Consumes("multipart/form-data")]
         public IActionResult UploadCsv([FromForm] IFormFile file)
